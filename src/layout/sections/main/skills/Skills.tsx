@@ -1,39 +1,96 @@
 import React from 'react';
 import styled from "styled-components";
 import {Skill} from "./skill/Skill";
+import {FlexWrapper} from "../../../../components/FlexWrapper";
+
+const skillsData = [
+    {
+        iconId: "ps",
+        width: "75",
+        height: "75",
+        viewBox: "0 0 75 75",
+        title: "Photoshop"
+    },
+    {
+        iconId: "ae",
+        width: "75",
+        height: "75",
+        viewBox: "0 0 75 75",
+        title: "After Effects"
+    },
+    {
+        iconId: "ai",
+        width: "75",
+        height: "75",
+        viewBox: "0 0 75 75",
+        title: "Illustrator"
+    },
+    {
+        iconId: "figma",
+        width: "75",
+        height: "75",
+        viewBox: "0 0 75 75",
+        title: "Figma"
+    },
+    {
+        iconId: "ps",
+        width: "75",
+        height: "75",
+        viewBox: "0 0 75 75",
+        title: "Photoshop"
+    },
+    {
+        iconId: "ae",
+        width: "75",
+        height: "75",
+        viewBox: "0 0 75 75",
+        title: "After Effects"
+    },
+    {
+        iconId: "ai",
+        width: "75",
+        height: "75",
+        viewBox: "0 0 75 75",
+        title: "Illustrator"
+    },
+    {
+        iconId: "figma",
+        width: "75",
+        height: "75",
+        viewBox: "0 0 75 75",
+        title: "Figma"
+    }
+];
 
 export const Skills = () => {
     return (
         <StyledSkills>
-            <Skill />
-            <Skill />
-            <Skill />
-            <Skill />
-            {/*    <Icon iconId={"ps"} width={"75"} height={"75"} viewBox={"0 0 75 75"} />*/}
-            {/*    <h3>Photoshop</h3>*/}
-            {/*</Skill>*/}
-            {/*<Skill>*/}
-            {/*    <Icon iconId={"ae"} width={"75"} height={"75"} viewBox={"0 0 75 75"} />*/}
-            {/*    <h3>After Effects</h3>*/}
-            {/*</Skill>*/}
-            {/*<Skill>*/}
-            {/*    <Icon iconId={"ai"} width={"75"} height={"75"} viewBox={"0 0 75 75"} />*/}
-            {/*    <h3>Illustrator</h3>*/}
-            {/*</Skill>*/}
-            {/*<Skill>*/}
-            {/*    <Icon iconId={"figma"} width={"75"} height={"75"} viewBox={"0 0 75 75"} />*/}
-            {/*    <h3>Figma</h3>*/}
-            {/*</Skill>*/}
+            <FlexWrapper wrap={"wrap"} justifyContent={"space-between"}>
+                {skillsData.map((item, index) => (
+                    <Skill
+                        key={index}
+                        iconId={item.iconId}
+                        title={item.title}
+                        width={item.width}
+                        height={item.height}
+                        viewBox={item.viewBox}
+                    />
+                ))}
+            </FlexWrapper>
         </StyledSkills>
     );
 };
 
 const StyledSkills = styled.div`
     background-color: #f4be79;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(160px, auto));
-    column-gap: 14px;
-    row-gap: 20px;
+    min-height: 100vh;
+    
+    
+    
+    //display: grid;
+    //grid-template-columns: repeat(auto-fit, minmax(160px, auto));
+    //column-gap: 14px;
+    //row-gap: 20px;
     
     //height: 100vh;
     //grid-template-columns: repeat(4, 161px);

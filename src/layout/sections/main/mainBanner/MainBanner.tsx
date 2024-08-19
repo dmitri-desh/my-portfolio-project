@@ -2,6 +2,8 @@ import React from 'react';
 import {FlexWrapper} from "../../../../components/FlexWrapper";
 import photo from "../../../../assets/images/ava-photo.png";
 import styled from "styled-components";
+import {Button} from "../../../../components/Button";
+import {Link} from "../../../../components/Link";
 
 export const MainBanner = () => {
     return (
@@ -15,8 +17,8 @@ export const MainBanner = () => {
                             save your money.</MainText>
                     </div>
                     <div>
-                        <button>See Projects</button>
-                        <button>Download Resume</button>
+                        <Button text={"See Projects"}/>
+                        <Link text={"Download Resume"} href={"#"}/>
                     </div>
                 </div>
             </FlexWrapper>
