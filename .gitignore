@@ -21,8 +21,3 @@
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
-/.idea/.gitignore
-/.idea/modules.xml
-/.idea/my-portfolio-project.iml
-/.idea/inspectionProfiles/Project_Default.xml
-/.idea/vcs.xml
