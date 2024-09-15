@@ -1,13 +1,28 @@
 import React from 'react';
 import styled from "styled-components";
 import {Logo} from "../../components/logo/Logo";
-import {Menu} from "../../components/menu/Menu";
+import {Menu, MenuItemPropsType} from "../../components/menu/Menu";
+
+const items: Array<MenuItemPropsType> = [
+    {
+        name: "Skills",
+        isProjects: false
+    },
+    {
+        name: "Projects",
+        isProjects: true
+    },
+    {
+        name: "Contact me",
+        isProjects: false
+    }
+];
 
 export const Header = () => {
     return (
         <StyledHeader>
             <Logo/>
-            <Menu/>
+            <Menu menuItems={items}/>
         </StyledHeader>
     );
 };

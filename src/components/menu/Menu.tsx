@@ -2,18 +2,23 @@ import React from 'react';
 import styled from "styled-components";
 import {Icon} from "../icon/Icon";
 
-export const Menu = () => {
+export type MenuItemPropsType = {
+    name: string,
+    isProjects: boolean
+}
+
+export const Menu = (props: {menuItems: Array<MenuItemPropsType>}) => {
     return (
         <StyledMenu>
             <ul>
-                <li><a href="">Skills</a></li>
-                <li>
-                    <a href="">
-                        <Icon iconId={'gearsRed'} width={'26.4'} height={'24'} viewBox={'0 0 26.4 24'}/>
-                        Projects
-                    </a>
-                </li>
-                <li><a href="">Contact me</a></li>
+                {props.menuItems.map((item, index) =>
+                    <li key={index}>
+                        <a href="">
+                            <Icon iconId={"gears"} width={"26"} height={"24"} viewBox={"0 0 26 24"}/>
+                            {item.name}
+                        </a>
+                    </li>
+                )}
             </ul>
         </StyledMenu>
     );
