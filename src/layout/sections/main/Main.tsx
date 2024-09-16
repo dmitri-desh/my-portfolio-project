@@ -3,6 +3,7 @@ import styled from "styled-components";
 import mainAva from "../../../assets/images/main-ava.png";
 import {FlexWrapper} from "../../../components/FlexWrapper";
 import {Button} from "../../../components/button/Button";
+import {theme} from "../../../styles/Theme";
 
 export const Main = () => {
     return (
@@ -25,7 +26,8 @@ export const Main = () => {
 
 const StyledMain = styled.section`
     min-height: 100vh;
-    background-color: #98b2f4;
+    background: radial-gradient(90.6% 78.78% at 93.96% 12.39%, rgba(220, 227, 228, 0.71) 0%, #FCFCFC 100%);
+    color: ${theme.colors.secondaryBg};
 `;
 
 const MainTitle = styled.h1`
