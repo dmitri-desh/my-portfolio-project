@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from "styled-components";
-import {Button} from "../../../../components/button/Button";
+ import {Button} from "../../../../components/button/Button";
+import {theme} from "../../../../styles/Theme";
 
 type ProjectPropsType = {
     text: string,
@@ -24,7 +25,10 @@ export const Project = (props: ProjectPropsType) => {
 };
 
 const StyledProject = styled.div`
-    background-color: #262C4D;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: ${theme.colors.tertiaryBg};
     max-width: 380px;
     width: 100%;
 `;
@@ -36,5 +40,7 @@ const Image = styled.img`
 `;
 
 const Text = styled.p`
-
+    text-align: center;
+    padding: 20px 0;
+    max-width: 360px;
 `;

@@ -1,5 +1,6 @@
 import {createGlobalStyle} from "styled-components";
 import {theme} from "./Theme";
+import {SectionTitle} from "../components/SectionTitle";
 
 export const GlobalStyle = createGlobalStyle`
     *,
@@ -17,7 +18,7 @@ export const GlobalStyle = createGlobalStyle`
         sans-serif;
         -webkit-font-smoothing: antialiased;
         -moz-osx-font-smoothing: grayscale;
-        color: ${theme.colors.font};
+        line-height: 1.2;
     }
 
     code {
@@ -36,6 +37,23 @@ export const GlobalStyle = createGlobalStyle`
     button {
         background-color: unset;
         border: none;
+            color: ${theme.colors.fontWhite};
+    }
+    
+    section {
+            padding: 70px 0;
+    }
+    
+    section:nth-of-type(odd) {
+        ${SectionTitle} {
+            color: ${theme.colors.fontWhite};
+        }
+    }
+
+    section:nth-of-type(even) {
+        ${SectionTitle} {
+            color: ${theme.colors.accent};
+        }
     }
     
     section:nth-of-type(n+2):nth-of-type(odd) {
@@ -43,6 +61,6 @@ export const GlobalStyle = createGlobalStyle`
     }
 
     section:nth-of-type(n+2):nth-of-type(even) {
-        background-color: ${theme.colors.primaryBg};
+            background: radial-gradient(90.6% 78.78% at 93.96% 12.39%, rgba(220, 227, 228, 0.71) 0%, #FCFCFC 100%);
     }
 `;

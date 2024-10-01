@@ -1,9 +1,10 @@
 import React from 'react';
 import styled from "styled-components";
 import {Logo} from "../../components/logo/Logo";
-import {Menu, MenuItemPropsType} from "../../components/menu/Menu";
 import {Container} from "../../components/Container";
 import {FlexWrapper} from "../../components/FlexWrapper";
+import {HeaderMenu, MenuItemPropsType} from "./headerMenu/HeaderMenu";
+import {theme} from "../../styles/Theme";
 
 const items: Array<MenuItemPropsType> = [
     {
@@ -26,7 +27,7 @@ export const Header = () => {
             <Container>
                 <FlexWrapper justifyContent={"space-between"} alignItems={"center"}>
                     <Logo/>
-                    <Menu menuItems={items}/>
+                    <HeaderMenu menuItems={items}/>
                 </FlexWrapper>
             </Container>
         </StyledHeader>
@@ -34,8 +35,8 @@ export const Header = () => {
 };
 
 const StyledHeader = styled.header`
-    background-color: #FCFCFC;
-    padding: 20px 0;
+    background-color: ${theme.colors.primaryBg};
+    padding: 10px 0;
     position: fixed;
     top: 0;
     left: 0;
